@@ -1,8 +1,19 @@
 <!-- templates/registration/login.html -->
 
-<h2>Login</h2>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--
+attempted CSS integration:
+<link href = "djangotutorial/myproject/accounts/templates/registration/flash/general.css" rel = "stylesheet" type = "text/css">
+-->
+<div id = "forms" align= "center" style="background-color: gray;">
+<h1 style="color: blue;">Login</h1>
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Login</button>
 </form>
+  </div>
+{% endblock %}

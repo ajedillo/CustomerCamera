@@ -3,11 +3,17 @@
 
 {% block title %}Home{% endblock %}
 {% block content %}
+<h1>Welcome to APCT!</h1>
+
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
+<a href="{% url 'login' %}" > <button>Log in</button> </a>
+<a href="{% url 'signup' %}" > <button>Sign Up</button> </a>
+
+
+
 {% endif %}
 {% endblock %}
