@@ -1,4 +1,14 @@
 How Retail Video Analytics Enhances Customer Experience
 https://www.einfochips.com/blog/retail-video-analytics-enhances-customer-experience/
-
 -A better look at what can be achieved from using video analytics from in-store cameras in a retail setting.
+
+Four Surprising Ways Retailers Can Leverage Heat Maps
+https://apparelmag.com/four-surprising-ways-retailers-can-leverage-heat-maps
+-A look into heatmapping and how retailers can use heat maps to monitor customer behavior. Possible implementation in the future.
+
+Draggable JavaScript library
+https://shopify.github.io/draggable/ 
+-What we plan to use for the store layout editor.
+
+JavaScript tutorials
+https://www.w3schools.com/js/ 
