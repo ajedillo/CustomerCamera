@@ -69,7 +69,7 @@ public class LayoutBuilder {
         public void actionPerformed(ActionEvent e) {
             JButton button = (JButton)e.getSource();
 
-            if ("Clear Drawing".equals(e.getActionCommand()))
+            if ("Erase Layout".equals(e.getActionCommand()))
                     drawingArea.clear();
             else
                     drawingArea.setForeground( button.getBackground() );
