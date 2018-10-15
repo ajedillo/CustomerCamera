@@ -9,3 +9,16 @@ https://www.amazon.com/Raspberry-Pi-Camera-Module-Megapixel/dp/B01ER2SKFS/
 Cost: 34.99 (Raspberry Pi 3) + 25.58 (Camera) + 9.99 (Power Supply)
     = 70.56
     = 141.12 (x2)
+
+#Software - Coding a Java application the porting to Javascript
+AjaxSwing - port .jar files into javascript applications - will tinker with this later
+http://creamtec.com/products/ajaxswing/index.html 
+https://www.youtube.com/watch?v=vMU5T6Pphnk
+https://www.youtube.com/watch?v=hkxGxZjAAXg
+
+Alternative to AjaxSwing - using Draggable.js library
+https://shopify.github.io/draggable/
+
+Javascript tutorials - 
+https://www.w3schools.com/js/
+https://www.youtube.com/watch?v=W6NZfCO5SIk
