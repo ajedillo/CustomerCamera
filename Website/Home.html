@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--APCT Home Page-->
+<html>
+<head>
+<!--The code that is commented out represents older versions-->
+	<title>All Purpose Customer Tracker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	.mySlides {display:none;}
+	</style>
+</head>
+<body class="w3-deep-orange">
+	<a name="Home.html"></a>
+	<div id="page">
+	<header>
+		<div class="w3-container w3-center w3-blue-gray w3-section w3-border">
+		<h1 class="w3-text-black"><a href="Home.html" style="text-decoration:none">All Purpose Customer Tracker</a></h1>
+		</div>
+	</header>
+		<!---
+		<button class="w3-button w3-left w3-deep-orange w3-xlarge" onclick="w3_open()">☰ Menu</button>           
+		<nav>
+		<div "w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+		<button onclick="w3_close()" class="w3-bar-item w3-large">Close</button>
+			<a href="AboutUs.html" class="w3-bar-item w3-button">About Us</a>
+			<a href="EditLayout.html" class="w3-bar-item w3-button">Edit Store Layout</a>
+			<a href="ViewData.html" class="w3-bar-item w3-button">View Store Data</a>
+		</div>
+		</nav>
+		
+	</header>
+	-->
+	<div class="w3-bar w3-blue-gray">
+		<a href="Home.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange w3-deep-orange">Home <i class="fa fa-home"></i></a>
+		<a href="AboutUs.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">About Us <i class="fa fa-info-circle"></i></a>
+		<a href="EditLayout.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">Edit Store Layout <i class="fa fa-edit"></i></a>
+		<a href="ViewData.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">View Data <i class="fa fa-line-chart"></i></a> 
+	</div>
+	<div class="w3-container w3-margin"></div>
+	<div class="w3-content w3-display-container">
+	<img class="mySlides" src="StoreAisle.jpg" style="width:100%">
+	<div class="w3-display-middle w3-container w3-padding-16 w3-black w3-text-deep-orange">
+    The All Purpose Customer Tracker lets stores keep track of where customers are spending most of their time.  Try it out today!
+	</div>
+	<img class="mySlides" src="SampleWebsiteLook.jpg" style="width:100%">
+	<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+	<!--
+	<div class="w3-mobile w3-container w3-margin">
+	<img src="StoreAisle.jpg" class="w3-image" style="width:100%" alt="Grocery Store">
+	<div class="w3-container w3-display-middle w3-black w3-opacity-min w3-text-deep-orange w3-large">The All Purpose Customer Tracker 
+	lets stores keep track of where customers are spending most of their time.  Try it out today!</div>
+	</div>
+	-->
+	<!--Image half
+		<div class= "w3-half w3-container w3-blue-gray w3-circle w3-padding-16">
+		<img src="StoreAisle.jpg" class="w3-image w3-circle" style="width:100%" alt="Grocery Store Aisles">
+	-->
+	<!--Image from http://stephie5741.blogspot.com/2015/09/introverts-need-awkward-conversation.html -->
+		
+	<!--Text half
+		<div class="w3-half w3-container">
+		<p class="w3-large">The All Purpose Customer Tracker lets stores keep track of where
+		customers are spending most of their time.</p>
+		</div>
+		-->
+	<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+	</div>
+</body>
+</html>
