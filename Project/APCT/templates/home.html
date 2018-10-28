@@ -1,0 +1,104 @@
+
+{% extends 'base.html' %}
+
+<!--APCT Home Page-->
+
+<html>
+	<head>
+		{% block title %}All Purpose Customer Tracker{% endblock %}
+		{% block content %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+		.mySlides {display:none;}
+		</style>
+
+	</head>
+
+	<body class="w3-deep-orange">
+		<div id="page">
+		<header>
+			<div class="w3-container w3-center w3-blue-gray w3-section w3-border">
+				<h1 class="w3-text-black"><a href="{% url 'home' %}" style="text-decoration:none">All Purpose Customer Tracker</a></h1>
+			</div>
+		</header>
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+    <p><a href="{% url 'logout' %}">logout</a></p>
+    {% else %}
+<!--      <p>You are not logged in</p>
+      <a href="{% url 'login' %}" > <button>Log in</button> </a>
+      <a href="{% url 'signup' %}" > <button>Sign Up</button> </a>
+      <a href="{% url 'about' %}" > <button>About</button></a>-->
+
+      
+ 
+      	<div class="w3-bar w3-blue-gray">
+		<a href="{% url 'home' %}" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange w3-deep-orange">Home <i class="fa fa-home"></i></a>
+		<a href="{% url 'about' %}" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">About Us <i class="fa fa-info-circle"></i></a>
+		<a href="{% url 'layout' %}" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">Edit Store Layout <i class="fa fa-edit"></i></a>
+		<a href="{% url 'login' %}" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">login <i class="fa fa-line-chart"></i></a> 
+	</div>
+	{% endif %}
+
+	<div class="w3-container w3-margin"></div>
+	<div class="w3-content w3-display-container">
+	<img class="mySlides" src="../templates/StoreAisle.jpg" style="width:100%">
+	<div class="w3-display-middle w3-container w3-padding-16 w3-black w3-text-deep-orange">
+	       	The All Purpose Customer Tracker lets stores keep track of where customers are spending most of their time.  Try it out today!
+	</div>
+	<img class="mySlides" src="../templates/SampleWebsiteLook.jpg" style="width:100%">
+	<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+
+
+		<script>
+
+var slideIndex = 1;
+
+showDivs(slideIndex);
+
+
+
+function plusDivs(n) {
+
+	  showDivs(slideIndex += n);
+
+}
+
+
+
+function showDivs(n) {
+
+	  var i;
+
+	    var x = document.getElementsByClassName("mySlides");
+
+	      if (n > x.length) {slideIndex = 1}    
+
+	        if (n < 1) {slideIndex = x.length}
+
+		  for (i = 0; i < x.length; i++) {
+
+			       x[i].style.display = "none";  
+
+			         }
+
+		    x[slideIndex-1].style.display = "block";  
+
+}
+
+		</script>
+
+			</div>
+
+	</body>
+
+</html>
+
+
+{% endblock %}
+
+
