@@ -1,25 +1,102 @@
 <!--Edit Layout-->
-<html>
+<html lang="en">
 <head>
-	<title>All Purpose Customer Tracker</title>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<style>
+#store {width: 1000px; height: 650px; border: 2px solid black;  margin: 0 10px 10px 0;}
+#aisle1, #aisle2, #aisle3, #aisle4, #aisle5 { width: 100px; height: 400px; text-align: center; border: 1px solid black; float: left; margin: 0 10px 10px 0;}
+#cam1, #cam2 { width: 50px; height: 50px; border-radius: 50%; text-align: center; border: 1px solid red; float: left; margin: 0 10px 0;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $( "#aisle1" ).draggable({containment: "parent"});
+    $( "#aisle2" ).draggable({containment: "parent"});
+    $( "#aisle3" ).draggable({containment: "parent"});
+	$( "#aisle4" ).draggable({containment: "parent"});
+	$( "#aisle5" ).draggable({containment: "parent"});
+    $( "#cam1" ).draggable({containment: "parent"});
+    $( "#cam2" ).draggable({containment: "parent"});
+  } );
+</script>
+
 </head>
-<body class="w3-deep-orange">
-	<a name="EditLayout.html"></a>
-<header>
-	<div class="w3-container w3-center w3-blue-gray w3-section w3-border">
-		<h1 class="w3-text-black"><a href="Home.html" style="text-decoration:none">All Purpose Customer Tracker</a></h1>
+
+<body>
+<!-- navigation -->
+<nav class="navbar navbar-inverse" style="padding:30px; margin-bottom:0; border-radius:0; border-color: #0066ff; background-color: #0066ff;">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" style="padding=0 15px 15px; color: black; font-size: 1.9em" href="Home2.html">All Purpose Customer Tracker</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="Home2.html" style="background-color: #0066ff; color: black; font-size: 1.3em">Home</a></li>
+				<li class="active"><a href="#" style="background-color: #0066ff; color: black; font-size: 1.3em">About Us</a></li>
+				<li class="active"><a href="EditLayout.html" style="background-color: #0066ff; color: black; font-size: 1.3em">Edit Layout</a></li>
+				<li class="active"><a href="#" style="background-color: #0066ff; color: black; font-size: 1.3em">View Data</a></li>
+			</ul>
+		</div>
 	</div>
-</header>
-<div class="w3-bar w3-blue-gray">
-	<a href="Home.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">Home <i class="fa fa-home"></i></a>
-	<a href="AboutUs.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">About Us <i class="fa fa-info-circle"></i></a>
-	<a href="EditLayout.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange w3-deep-orange">Edit Store Layout <i class="fa fa-edit"></i></a>
-	<a href="ViewData.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">View Data <i class="fa fa-line-chart"></i></a> 
-</div>
-<div class="w3-container w3-margin w3-padding w3-border">
-	<p>This is the page where the store layout will be edited.</p>
+</nav>
+
+<div class="container text-center" style="margin: 5% auto">
+	<h2>Layout Editor</h2>
+	<div class="row">
+		<div class="col-md-12">
+		<p>Use the editor below to input the design of your store.</p>
+		</div>
+	</div>
+	<br>
+<!-- Layout Builder -->
+	<div class="row">
+		<div class="col-md-12">
+			<div id="store" class="ui-widget-content">
+			
+			
+				<div id="aisle1" class="ui-widget-content">
+				<p>Aisle1</p>
+				</div>
+
+				<div id="aisle2" class="ui-widget-content">
+				<p>Aisle2</p>
+				</div>
+
+				<div id="aisle3" class="ui-widget-content">
+				<p>Aisle3</p>
+				</div>
+				
+				<div id="aisle4" class="ui-widget-content">
+				<p>Aisle4</p>
+				</div>
+				
+				<div id="aisle5" class="ui-widget-content">
+				<p>Aisle5</p>
+				</div>
+
+				<div id="cam1" class="ui-widget-content">
+				<p>Cam1</p>
+				</div>
+
+				<div id="cam2" class="ui-widget-content">
+				<p>Cam2</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>
