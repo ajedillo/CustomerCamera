@@ -3,3 +3,8 @@ https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 
 Django Static research
 https://docs.djangoproject.com/en/2.1/howto/static-files/
+
+Django Database Research
+https://docs.djangoproject.com/en/2.1/intro/tutorial01/
+http://www.tangowithdjango.com/book/chapters/models.html
+https://docs.djangoproject.com/en/2.1/topics/auth/
