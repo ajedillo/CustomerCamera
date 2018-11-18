@@ -1,24 +1,168 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<!-- New store layout page -->
 <head>
-	<title>All Purpose Customer Tracker</title>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body class="w3-deep-orange">
-	<header>
-		<div class="w3-container w3-center w3-blue-gray w3-section w3-border">
-			<h1 class="w3-text-black"><a  style="text-decoration:none">All Purpose Customer Tracker</a></h1>
-		</div>
-	</header>
-	<div class="w3-bar w3-blue-gray">
-		<a href="home.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">Home <i class="fa fa-home"></i></a>
-		<a href="about.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">About Us <i class="fa fa-info-circle"></i></a>
-		<a href="EditLayout.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange w3-deep-orange">Edit Store Layout <i class="fa fa-edit"></i></a>
-		<!--<a href="ViewData.html" class="w3-bar-item w3-button w3-mobile w3-hover-deep-orange">View Data <i class="fa fa-line-chart"></i></a>-->
-	  </div>
-	  <div class="w3-container w3-margin w3-padding w3-border">
-		  <p>This is the page where the store layout will be edited.</p>
-	  </div>
-</body>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>All Purpose Customer Tracker</title>
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+	<link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+	<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">All Purpose Customer Tracker</a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                   
+                </li>
+               
+            </ul>
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href=""><i class="fa fa-dashboard fa-fw"></i>Store Statistics</a>
+                        </li>
+						<li>
+							<a href="layout"><i class="fa fa-edit fa-fw"></i>Enter Store Layout</a>
+						</li>
+						<li>
+							<a href=""><i class="fa fa-info fa-fw"></i>About Us</a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Store Layout</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Use this form to input your store information
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6"> <!-- left column span 6 -->
+                                    <form name="layout-form" action= "{% url "" %}" method="POST">{% csrf_token %}
+                                        <div class="form-group">
+                                            <label>Store Name</label>
+                                            <input class="form-control"></input>
+                                        </div>
+										<div class="form-group">
+											<label>Store Address</label>
+											<input class="form-control"></input>
+										</div>
+										<div>
+											<label>City</label>
+											<input class="form-control"></input>
+										</div>
+										<div>
+											<label>State</label>
+											<input class="form-control"></input>
+										</div>
+										<div>
+											<label>Zip Code</label>
+											<input class="form-control"></input>
+										</div>
+										<div>
+											<label>Placement of Camera 1</label>
+											<input class="form-control"></input>
+										</div>
+										<div>
+											<label>Placement of Camera 2</label>
+											<input class="form-control"></input>
+										</div>
+										<br>
+                                        <button type="submit" class="btn btn-default">Submit Button</button>
+                                        <button type="reset" class="btn btn-default">Reset Button</button>
+                                    
+                                </div>
+                              
+                                <div class="col-lg-6"> <!-- right column span 6 -->
+									
+                                    <div>
+										<label>Manager's First Name</label>
+										<input class="form-control"></input>
+									</div>
+									
+									<div>
+										<label>Manager's Last Name</label>
+										<input class="form-control"></input>
+									</div>
+									
+									<div>
+										<label>Manager's Email</label>
+										<input class="form-control"></input>
+									</div>
+									<div>
+										<label>Manager's Phone Number</label>
+										<input class="form-control"></input>
+									</div>
+									
+                                </div>
+                                </form>
+                            </div>
+                          
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+
+    </div>
+    
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+	<script src="../dist/js/sb-admin-2.js"></script>
+</body>
 </html>
+
