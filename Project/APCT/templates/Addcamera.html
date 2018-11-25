@@ -1,0 +1,53 @@
+<html>
+
+<script>
+
+
+function CreateForm()
+//Script which allows to dynamically add textboxes
+{
+//Originally planned to have textbox IDs and placeholder text increment by 1
+//i.e. set i=0, i++; Able to increment the IDs and placeholder text: "Name camera#(i)
+//Could not get the integer along with the placeholders to read correctly with the delete function
+
+
+a=document.getElementById("formlocation");
+
+b=document.createElement("input");
+b.setAttribute("type","text");
+b.setAttribute("id","t1");
+b.setAttribute("placeholder","Name Camera");
+a.appendChild(b);
+
+linebreak = document.createElement("br");
+linebreak.setAttribute("id","br1");
+a.appendChild(linebreak);
+}
+function RemoveForm()
+//delete textboxes
+{
+
+a1=document.getElementById("formlocation");
+newline=document.getElementById("br1");
+b1=document.getElementById("t1");
+
+
+
+
+a1.removeChild(b1);
+a1.removeChild(newline);
+}
+</script>
+
+<body>
+
+<h1 align = "center">Add Cameras</h1>
+
+<!--Button allows EU to add new camera text box, as well as remove-->
+
+<input type="button" value="Add" onClick="CreateForm()"/><br>
+<input type="button" value="Remove" onClick="RemoveForm()"/><br>
+<div id="formlocation" align ="center"></div><br>
+</body>
+
+</html>

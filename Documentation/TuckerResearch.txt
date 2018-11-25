@@ -8,3 +8,13 @@ Django Database Research
 https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 http://www.tangowithdjango.com/book/chapters/models.html
 https://docs.djangoproject.com/en/2.1/topics/auth/
+
+Bootstrap Research
+https://www.w3schools.com/bootstrap4/
+https://www.youtube.com/watch?v=qIULMnbH2-o&list=PL6gx4Cwl9DGBPw1sFodruZUPheWVKchlM
+
+W3 CSS Research
+https://www.w3schools.com/w3css/default.asp
+
+HTML form research
+https://www.w3schools.com/html/html_forms.asp
