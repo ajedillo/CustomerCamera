@@ -41,4 +41,4 @@ Installation:
 
 1. Ensure build path in Eclipse references JUnit 4.12 and OpenCV 4.0.0
 2. Open source folder with Eclipse, choosing the 'master' directory as the project file
-3. Run file main, adjust input as needed
+3. Run file main, adjust video input as needed at CONFIG.java
