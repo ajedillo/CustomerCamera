@@ -27,7 +27,7 @@ enter credentials
 Then navigate to 127.0.0.1:8080 to view the homepage
 Login with previous created credentials.
 
-** CAMERA SOLUTION INSTALL INSTRUCTIONS**
+**CAMERA SOLUTION INSTALL INSTRUCTIONS**
 
 Requirements:
 
